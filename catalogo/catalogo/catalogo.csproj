@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C5AF612-FB6A-44C0-805B-92F9FCACB6DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>catalogo</RootNamespace>
+    <AssemblyName>catalogo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Catalogo\agregar_catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\agregar_catalogo.Designer.cs">
+      <DependentUpon>agregar_catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\Catalogo_cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\Catalogo_cuentas.Designer.cs">
+      <DependentUpon>Catalogo_cuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs" />
+    <Compile Include="Contabilizar\comprobante_egreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilizar\comprobante_egreso.Designer.cs">
+      <DependentUpon>comprobante_egreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilizar\nota_credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilizar\nota_credito.Designer.cs">
+      <DependentUpon>nota_credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilizar\nota_debito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilizar\nota_debito.Designer.cs">
+      <DependentUpon>nota_debito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilizar\comprobante_ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilizar\comprobante_ingreso.Designer.cs">
+      <DependentUpon>comprobante_ingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilizar\asiento_diario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilizar\asiento_diario.Designer.cs">
+      <DependentUpon>asiento_diario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\modificar_catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\modificar_catalogo.Designer.cs">
+      <DependentUpon>modificar_catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Diario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Diario.Designer.cs">
+      <DependentUpon>Diario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\modificar_entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\modificar_entrada.Designer.cs">
+      <DependentUpon>modificar_entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tools.cs" />
+    <EmbeddedResource Include="Catalogo\agregar_catalogo.resx">
+      <DependentUpon>agregar_catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\Catalogo_cuentas.resx">
+      <DependentUpon>Catalogo_cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilizar\comprobante_egreso.resx">
+      <DependentUpon>comprobante_egreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilizar\nota_credito.resx">
+      <DependentUpon>nota_credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilizar\nota_debito.resx">
+      <DependentUpon>nota_debito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilizar\comprobante_ingreso.resx">
+      <DependentUpon>comprobante_ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilizar\asiento_diario.resx">
+      <DependentUpon>asiento_diario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\modificar_catalogo.resx">
+      <DependentUpon>modificar_catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\Diario.resx">
+      <DependentUpon>Diario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\modificar_entrada.resx">
+      <DependentUpon>modificar_entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
